@@ -1,9 +1,11 @@
-import { CiCirclePlus } from "react-icons/ci";
+import { FaPlus } from "react-icons/fa6";
 
 const AddTaskBtn = () => {
   return (
-        <CiCirclePlus className="bg-blue-900"/>
-  )
-}
+    <div className="absolute bottom-6 right-6 bg-blue-900 p-4 rounded-full shadow-md hover:bg-blue-700 cursor-pointer">
+      <FaPlus className="text-white"/>
+    </div>
+  );
+};
 
-export default AddTaskBtn
+export default AddTaskBtn;

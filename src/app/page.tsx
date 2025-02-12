@@ -2,16 +2,14 @@ import Header from "../components/Header/Header";
 import TasksContainer from "../components/TasksContainer/TasksContainer";
 import AddTaskBtn from "../components/AddTaskBtn/AddTaskBtn";
 import { TaskType } from "@/types";
+import { tasksData } from "../../public/tasksData";
 
 export default function Home() {
-  const tasks: TaskType [] = []
   return (
-    <div>
-      <div className="container bg-white w-1/2 h-3/4 mx-auto mt-20 p-4 border-slate-200 rounded-md">
+      <div className="container relative bg-white w-1/2 mx-auto mt-20 border-slate-200 rounded-lg">
         <Header/>
-        <TasksContainer tasks={tasks}/>
+        <TasksContainer tasks={tasksData}/>
         <AddTaskBtn/>
       </div>
-    </div>
   );
 }

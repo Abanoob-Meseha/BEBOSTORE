@@ -6,7 +6,7 @@ interface TaskContainerProps {
 }
 const TasksContainer = ({tasks}:TaskContainerProps) => {
   return (
-    <div className="container flex items-start flex-col">
+    <div className="container flex items-start flex-col p-4 h-96 overflow-auto">
       {
       tasks.map((task, index) => {
         return <Task key={index} {...task} />;
