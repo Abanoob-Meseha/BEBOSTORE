@@ -2,7 +2,7 @@ import { CiCirclePlus } from "react-icons/ci";
 
 const AddTaskBtn = () => {
   return (
-        <CiCirclePlus className=""/>
+        <CiCirclePlus className="bg-blue-900"/>
   )
 }
 
