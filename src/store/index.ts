@@ -1,8 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit'
-import tasksReducer from "@/slices/tasks/tasksSlice"
-
-export default configureStore({
+import tasksReducer from "@/features/tasks/tasksSlice"
+import navbarReducer from "@/features/navbar/navbarSlice";
+const store =  configureStore({
   reducer: {
-    tasks : tasksReducer
+    tasks : tasksReducer ,
+    navbar : navbarReducer
   },
 })
+export default store ;
+// Infer the `RootState` and `AppDispatch` types from the store itself
+export type RootState = ReturnType<typeof store.getState>
+// Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}
+export type AppDispatch = typeof store.dispatch
