@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Button from "../Button/Button";
 
 const Navbar = () => {
   return (
@@ -29,12 +30,8 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="basis-1/4 flex gap-2 justify-end">
-        <button className="px-4 py-2 bg-slate-200 rounded-xl hover:bg-slate-300 cursor-pointer">
-          Login
-        </button>
-        <button className="px-4 py-2 bg-blue-900 rounded-xl text-white hover:bg-blue-700 cursor-pointer">
-          Sign Up
-        </button>
+        <Button type="secondary" > Login </Button>
+        <Button type="primary" > Sign Up </Button>
       </div>
     </div>
   );
