@@ -9,3 +9,10 @@ export type FeatureType ={
   src : string 
   title : string
 }
+
+export type ReviewType ={
+  img: string 
+  name: string 
+  review: string
+  rating : number
+}
