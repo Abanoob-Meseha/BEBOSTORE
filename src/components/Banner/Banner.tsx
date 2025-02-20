@@ -4,7 +4,7 @@ import { FaDownload } from "react-icons/fa";
 
 const Banner = () => {
   return (
-    <div className="flex flex-col items-center px-4 sm:px-10 md:px-20 lg:px-40 py-10 justify-center gap-8 md:gap-16 md:flex-row">
+    <div className="flex flex-col items-center px-4 sm:px-10 md:px-20 lg:px-40 py-10 justify-center gap-8 md:gap-16 md:flex-row mt-5 md:mt-10">
       {/* Text Content */}
       <div className="w-full max-w-2xl text-center md:text-left">
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-blue-950 font-bold">
