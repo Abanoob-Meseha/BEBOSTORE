@@ -5,10 +5,12 @@ import { tasksData } from "../../public/tasksData";
 import Banner from "@/components/Banner/Banner";
 import FeatureSection from "@/components/FeatureSection/FeatureSection";
 import ReviewSection from "@/components/ReviewSection/ReviewSection";
+import Modal from "@/components/Modal/Modal";
 
 export default function Home() {
   return (
     <div>
+      <Modal/>
       <Banner />
       <FeatureSection/>
       <ReviewSection />
