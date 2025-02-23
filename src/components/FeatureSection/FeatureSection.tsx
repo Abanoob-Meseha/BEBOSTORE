@@ -18,12 +18,12 @@ const features: FeatureType[] = [
 const FeatureSection = () => {
   return (
     <div className="text-center mt-16">
-        <h1 className="text-3xl font-bold">Your Work will be: </h1>
+        <h1 className="text-3xl font-bold text-blue-950">Your Work will be: </h1>
         <div className="flex flex-col items-center justify-center mt-8 md:flex-row md:mx-auto gap-10">
             {
                 features.map((feature , index)=>{
                     return(
-                        <Feature src={feature.src} title={feature.title}/>
+                        <Feature src={feature.src} title={feature.title} key={index}/>
                     )
                 })
             }
