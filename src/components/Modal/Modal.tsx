@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { FaRegWindowClose } from "react-icons/fa";
 import { closeModal } from "@/features/auth/authSlice";
 import SignupForm from "../SignupForm/SignupForm";
+import LoginForm from "../LoginForm/LoginForm";
 
 const Modal = () => {
   const { loginIsOpen, signupIsOpen, modalIsOpen } = useSelector(
@@ -12,7 +13,9 @@ const Modal = () => {
   const dispatch = useDispatch();
   return (
     <div
-      className={`${modalIsOpen ? "fixed" : "hidden"} top-16 z-10 min-w-full min-h-full backdrop-blur`}
+      className={`${
+        modalIsOpen ? "fixed" : "hidden"
+      } top-16 z-10 min-w-full min-h-full backdrop-blur`}
     >
       <div
         className={
@@ -25,7 +28,7 @@ const Modal = () => {
           onClick={() => dispatch(closeModal())}
         />
         {loginIsOpen ? (
-          "Welcome in Login"
+          <LoginForm />
         ) : signupIsOpen ? (
           <SignupForm />
         ) : (

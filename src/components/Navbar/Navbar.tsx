@@ -7,7 +7,7 @@ import { ReactNode } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/store";
 import { toggleNav } from "@/features/navbar/navbarSlice";
-import { toggleLogin, toggleSignup } from "@/features/auth/authSlice";
+import { openLogin, openSignup } from "@/features/auth/authSlice";
 
 const Navbar = () => {
   const isOpen = useSelector((store: RootState) => store.navbar.isOpen);
@@ -33,8 +33,8 @@ const Navbar = () => {
           <NavLink>Contact Us</NavLink>
         </div>
         <div className="flex flex-col w-full md:w-auto gap-2 md:justify-end md:flex-row">
-          <Button type="secondary" onClick={()=>dispatch(toggleLogin())}> Login </Button>
-          <Button type="primary" onClick={()=>dispatch(toggleSignup())}> Sign Up </Button>
+          <Button type="secondary" onClick={()=>dispatch(openLogin())}> Login </Button>
+          <Button type="primary" onClick={()=>dispatch(openSignup())}> Sign Up </Button>
         </div>
       </div>
     </div>
