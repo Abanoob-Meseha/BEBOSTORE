@@ -14,7 +14,7 @@ const Navbar = () => {
   const dispatch = useDispatch();
   
   return (
-    <div className="sticky top-0 w-[95%] bg-white p-4 mx-auto rounded-xl shadow-2xl flex items-center justify-between">
+    <div className="sticky top-0 w-[95%] bg-white p-4 mx-auto rounded-xl shadow-2xl flex items-center justify-between z-50">
       <Link href={"/"} className="flex items-center gap-2">
         <Image src="/logo.png" alt="todo icon" width={40} height={40} />
         <h1 className="text-3xl font-bold">TODO</h1>

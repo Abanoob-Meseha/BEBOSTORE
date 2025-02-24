@@ -1,13 +1,43 @@
+import Image from "next/image";
 import Link from "next/link";
+import { TbBrandYoutubeFilled } from "react-icons/tb";
+import { AiFillInstagram } from "react-icons/ai";
+import { RiFacebookCircleFill } from "react-icons/ri";
+import { AiFillGooglePlusCircle } from "react-icons/ai";
+import { FaSquareXTwitter } from "react-icons/fa6";
+import { FaGooglePlay } from "react-icons/fa";
+import { FaAppStoreIos } from "react-icons/fa";
+import { FaApple } from "react-icons/fa";
 
 const Footer = () => {
+  const iconStyle: string =
+    "bg-blue-900 p-2 rounded-full cursor-pointer hover:-translate-x-1 hover:bg-blue-950";
   return (
-    <footer className="fixed bg-slate-50 bottom-0 left-1/2 w-fit px-4 -translate-x-1/2 text-center shadow-md rounded-lg mt-10">
-      <h1>
+    <footer className="relative bg-white w-full pt-4 text-center shadow-2xl mt-10 flex flex-col items-center">
+      <div className="flex items-center gap-2">
+        <Image src="/logo.png" alt="todo icon" width={80} height={80} />
+        <h1 className="text-6xl font-bold">TODO</h1>
+      </div>
+      <div className="flex items-center gap-4 my-4">
+        <Link href={""} className="p-2 bg-black flex gap-1 text-white rounded-lg items-center">
+          <FaGooglePlay /> Google Play
+        </Link>
+        <Link href={""} className="p-2 bg-black flex gap-1 text-white rounded-lg items-center">
+          <FaApple /> App Store
+        </Link>
+      </div>
+      <div className="flex flex-row my-4 gap-3 items-center">
+        <TbBrandYoutubeFilled size={45} className={iconStyle} color="white" />
+        <AiFillInstagram size={45} color="white" className={iconStyle} />
+        <RiFacebookCircleFill size={45} color="white" className={iconStyle} />
+        <AiFillGooglePlusCircle size={45} color="white" className={iconStyle} />
+        <FaSquareXTwitter size={43} color="white" className={iconStyle} />
+      </div>
+      <h1 className="w-full bg-blue-950 py-2">
         All Rights reserved to{" "}
         <Link
           href="https://www.linkedin.com/in/abanoob-meseha"
-          className="text-blue-950 font-bold"
+          className="text-white font-bold"
         >
           @Abanoub Meseha
         </Link>{" "}
