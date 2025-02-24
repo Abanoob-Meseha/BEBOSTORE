@@ -51,7 +51,7 @@ const reviews: ReviewType[] = [
 ];
 const ReviewSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const screenWidth: number = window.innerWidth ; 
+  const [screenWidth, setScreenWidth] = useState(0);
   const gapPercent: number = 5;
 
   const nextReview = () => {
@@ -65,13 +65,23 @@ const ReviewSection = () => {
     };
   }, []);
 
+  useEffect(() => {
+    setScreenWidth(window.innerWidth);
+    const handleResize = () => setScreenWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div className="w-[95%] mx-auto mt-20 flex flex-col items-center overflow-hidden">
       <h1 className="text-2xl text-blue-950 font-bold">Our Clients Reviews</h1>
       <div
         className="flex transition-transform duration-1000 ease-in-out mt-16 items-center relative max-w-full gap-5"
         style={{
-          transform: `translateX(-${currentIndex * ((screenWidth <768? 100 : 30) + gapPercent)}%)`,
+          transform: `translateX(-${
+            currentIndex * ((screenWidth < 768 ? 100 : 30) + gapPercent)
+          }%)`,
         }}
       >
         {reviews.map((clientReview, index) => (
@@ -82,12 +92,15 @@ const ReviewSection = () => {
       </div>
       <div className="flex flex-row mx-auto text-center gap-1 mt-6">
         {reviews.map((clientReview, index) => {
-          return index === currentIndex ? <GoDotFill key={index} /> : <GoDot key={index} />;
+          return index === currentIndex ? (
+            <GoDotFill key={index} />
+          ) : (
+            <GoDot key={index} />
+          );
         })}
       </div>
     </div>
   );
 };
-
 
 export default ReviewSection;

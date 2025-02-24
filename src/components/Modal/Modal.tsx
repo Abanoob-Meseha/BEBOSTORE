@@ -1,20 +1,39 @@
-"use client"
-import { RootState } from "@/store"
-import { useDispatch, useSelector } from "react-redux"
+"use client";
+import { RootState } from "@/store";
+import { useDispatch, useSelector } from "react-redux";
 import { FaRegWindowClose } from "react-icons/fa";
 import { closeModal } from "@/features/auth/authSlice";
+import SignupForm from "../SignupForm/SignupForm";
 
 const Modal = () => {
-    const { loginIsOpen, signupIsOpen , modalIsOpen } = useSelector((store : RootState) =>store.auth)
-    const dispatch = useDispatch() ;
+  const { loginIsOpen, signupIsOpen, modalIsOpen } = useSelector(
+    (store: RootState) => store.auth
+  );
+  const dispatch = useDispatch();
   return (
-    <div className={`${modalIsOpen?"fixed": "hidden"} bg-white rounded-lg z-10 shadow-2xl w-[80%] mx-auto top-18 h-3/4 left-10 p-4`}>
-        <FaRegWindowClose className="absolute right-2 top-2" color="red" size={30} onClick={()=>dispatch(closeModal())}/>
-        {
-            loginIsOpen ? "Welcome in Login" : signupIsOpen? "Welcome to signUp" : "Empty Modal"
+    <div
+      className={`${modalIsOpen ? "fixed" : "hidden"} top-16 z-10 min-w-full min-h-full backdrop-blur`}
+    >
+      <div
+        className={
+          "relative bg-white rounded-lg shadow-2xl top-8 w-[80%] mx-auto p-4 md:w-[30%]"
         }
+      >
+        <FaRegWindowClose
+          className="absolute right-4 top-4 font-bold text-blue-700  hover:text-red-400"
+          size={25}
+          onClick={() => dispatch(closeModal())}
+        />
+        {loginIsOpen ? (
+          "Welcome in Login"
+        ) : signupIsOpen ? (
+          <SignupForm />
+        ) : (
+          "Empty Modal"
+        )}
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Modal
+export default Modal;
