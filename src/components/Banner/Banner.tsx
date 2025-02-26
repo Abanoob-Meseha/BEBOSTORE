@@ -15,10 +15,10 @@ const Banner = () => {
           manager and to-do list app.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 items-center justify-center md:justify-start">
-          <Button type="primary" className="px-6">
+          <Button type="primary" className="px-8 py-4">
             Start For Free
           </Button>
-          <Button type="secondary" className="px-6">
+          <Button type="secondary" className="px-8 py-4">
             Download App <FaDownload />
           </Button>
         </div>

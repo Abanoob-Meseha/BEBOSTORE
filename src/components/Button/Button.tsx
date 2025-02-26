@@ -9,7 +9,7 @@ interface btnProps {
 }
 const Button  = (props: btnProps) => {
   const disabledStyle: string = props.disabled ? "opacity-50 cursor-not-allowed":"" ;
-  const baseStyle: string = "flex justify-center gap-1 items-center px-4 py-2 rounded-xl"
+  const baseStyle: string = "flex justify-center gap-1 items-center px-4 py-2 rounded-xl shadow-2xl"
   const primaryStyle: string = " text-white  bg-blue-900 hover:bg-blue-700"
   const secondaryStyle: string = "bg-slate-200  hover:bg-slate-300"
   return props.type == "primary" ? (
