@@ -1,0 +1,15 @@
+Copyright (c) 2025 Abanoub
+
+This project is licensed under the Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) License.
+
+## Permissions:
+- You may copy, distribute, and modify this code for **non-commercial purposes** only.
+- Proper attribution to the original author (Abanoub) is required.
+
+## Restrictions:
+- **Commercial use is prohibited** without explicit written permission from the author.
+- No warranties or liability are provided with this software.
+
+For commercial licensing inquiries, contact [abanoob.meseha@gmail.com].
+
+Full license text: https://creativecommons.org/licenses/by-nc/4.0/

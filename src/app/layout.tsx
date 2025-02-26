@@ -4,8 +4,8 @@ import ReduxProvider from "@/store/ReduxProvider";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 export const metadata: Metadata = {
-  title: "Todo",
-  description: "Your best Task Management APP",
+  title: "BEBOSTORE",
+  description: "All you need in one Place",
 };
 
 export default function RootLayout({

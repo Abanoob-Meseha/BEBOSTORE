@@ -16,8 +16,8 @@ const Navbar = () => {
   return (
     <div className="sticky top-0 w-[95%] bg-white p-4 mx-auto rounded-xl shadow-2xl flex items-center justify-between z-50">
       <Link href={"/"} className="flex items-center gap-2">
-        <Image src="/logo.png" alt="todo icon" width={40} height={40} />
-        <h1 className="text-3xl font-bold">TODO</h1>
+        <Image src="/logo.png" alt="todo icon" width={50} height={50} />
+        <h1 className="text-3xl font-bold">BEBO<span className="text-primary">STORE</span></h1>
       </Link>
       <div className="flex md:hidden ">
         <HiOutlineMenu size={35} onClick={() => dispatch(toggleNav())} />
