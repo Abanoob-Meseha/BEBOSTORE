@@ -13,12 +13,12 @@ const Footer = () => {
   const iconStyle: string =
     "bg-blue-900 p-2 rounded-full cursor-pointer hover:-translate-x-1 hover:bg-blue-950";
   const downloadBtnStyle: string =
-    "border-2 p-2 bg-black flex gap-1 text-white rounded-lg items-center transition ease-in-out duration-800 hover:border-blue-800  hover:bg-white hover:text-blue-800";
+    "border-2 p-2 px-4 bg-black flex gap-1 text-white rounded-lg items-center transition ease-in-out duration-800 hover:border-blue-800  hover:bg-white hover:text-blue-800";
   return (
     <footer className="relative bg-white w-full pt-6 text-center shadow-2xl mt-10 flex flex-col items-center">
       <div className="flex items-center gap-2">
         <Image src="/logo.png" alt="todo icon" width={80} height={80} />
-        <h1 className="text-6xl font-bold">TODO</h1>
+        <h1 className="text-6xl font-bold">BEBO<span className="text-primary">STORE</span></h1>
       </div>
       {/* App Download */}
       <div>

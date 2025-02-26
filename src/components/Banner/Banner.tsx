@@ -8,15 +8,15 @@ const Banner = () => {
       {/* Text Content */}
       <div className="w-full max-w-2xl text-center md:text-left">
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-blue-950 font-bold">
-          Organize your work and life, Easily.
+          Shop Smarter, Save More!
         </h1>
         <p className="my-4 text-lg sm:text-xl text-gray-800 bg-slate-100 p-2 rounded-lg">
-          Simplify life for both you and your team with the world’s #1 task
-          manager and to-do list app.
+          Discover the best deals on top products with fast delivery and secure
+          payments. Your ultimate shopping destination!
         </p>
         <div className="flex flex-col sm:flex-row gap-4 items-center justify-center md:justify-start">
           <Button type="primary" className="px-8 py-4">
-            Start For Free
+            Start Shopping
           </Button>
           <Button type="secondary" className="px-8 py-4">
             Download App <FaDownload />
@@ -27,12 +27,12 @@ const Banner = () => {
       {/* Image */}
       <div className="w-full max-w-4xl">
         <Image
-          src={"/timeTable.png"}
+          src={"/e-commerce.png"}
           width={600}
           height={400}
           alt="Banner Image"
           layout="responsive"
-          className="rounded-lg shadow-lg"
+          className="drop-shadow-xl"
         />
       </div>
     </div>
