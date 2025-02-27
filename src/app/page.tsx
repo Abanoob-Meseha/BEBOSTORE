@@ -1,12 +1,14 @@
 import Header from "../components/Header/Header";
 import TasksContainer from "../components/TasksContainer/TasksContainer";
 import AddTaskBtn from "../components/AddTaskBtn/AddTaskBtn";
-import { tasksData } from "../../public/tasksData";
+import { tasksData } from "../staticData/tasksData";
 import Banner from "@/components/Banner/Banner";
 import FeatureSection from "@/components/FeatureSection/FeatureSection";
-import ReviewSection from "@/components/ReviewSection/ReviewSection";
+import ReviewSection from "@/components/Slider/Slider";
 import Modal from "@/components/Modal/Modal";
 import Cart from "@/components/Cart/Cart";
+import reviews from "@/staticData/reviews" ;
+import Slider from "@/components/Slider/Slider";
 
 export default function Home() {
   return (
@@ -15,12 +17,8 @@ export default function Home() {
       <Cart />
       <Banner />
       <FeatureSection/>
-      <ReviewSection />
-      <div className="relative bg-white w-1/2 mx-auto mt-20 border-slate-200 rounded-lg h-96 pb-20 shadow-lg">
-        <Header />
-        <TasksContainer tasks={tasksData} />
-        <AddTaskBtn />
-      </div>
+      <h1 className="text-2xl text-blue-950 font-bold mt-20 text-center">Our Clients Reviews</h1>
+      <Slider itemsList={reviews} intervalDuration={2000}/>
     </div>
   );
 }
