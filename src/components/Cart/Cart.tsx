@@ -1,5 +1,5 @@
 "use client"
-import { RootState } from "@/store";
+import { RootState } from "@/redux/store";
 import { FaShoppingCart } from "react-icons/fa";
 import { useSelector } from "react-redux";
 

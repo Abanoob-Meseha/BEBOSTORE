@@ -1,18 +1,17 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import ReduxProvider from "@/store/ReduxProvider";
+import ReduxProvider from "@/providers/ReduxProvider";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
+import { ReactNode } from "react";
+import I18nProvider from "@/providers/I18nProvider";
+
 export const metadata: Metadata = {
   title: "BEBOSTORE",
   description: "All you need in one Place",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body
@@ -20,9 +19,11 @@ export default function RootLayout({
         style={{ backgroundImage: "url('bg.jfif')" }}
       >
         <ReduxProvider>
-          <Navbar />
-          {children}
-          <Footer/>
+          <I18nProvider>
+            <Navbar />
+            {children}
+            <Footer />
+          </I18nProvider>
         </ReduxProvider>
       </body>
     </html>

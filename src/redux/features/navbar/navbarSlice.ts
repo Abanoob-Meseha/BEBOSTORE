@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    isOpen : false as boolean 
+    isOpen : false as boolean ,
+    toLanguage : "AR"
 }
 export const navbarSlice = createSlice({
     name: "navbar",
@@ -15,10 +16,13 @@ export const navbarSlice = createSlice({
         },
         closeNav : (state)=>{
             state.isOpen = false
+        },
+        switchLanguage: (state)=>{
+            state.toLanguage = state.toLanguage == "AR" ? "EN" : "AR";  
         }
     }
 })
 
 export default navbarSlice.reducer ;
 
-export const {toggleNav , openNav , closeNav} = navbarSlice.actions ;
+export const {toggleNav , openNav , closeNav , switchLanguage} = navbarSlice.actions ;

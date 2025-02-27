@@ -1,8 +1,8 @@
 "use client";
-import { RootState } from "@/store";
+import { RootState } from "@/redux/store";
 import { useDispatch, useSelector } from "react-redux";
 import { FaRegWindowClose } from "react-icons/fa";
-import { closeModal } from "@/features/auth/authSlice";
+import { closeModal } from "@/redux/features/auth/authSlice";
 import SignupForm from "../SignupForm/SignupForm";
 import LoginForm from "../LoginForm/LoginForm";
 
