@@ -16,3 +16,8 @@ export type ReviewType ={
   review: string
   rating : number
 }
+export enum modalItem {
+  cart ="cart" ,
+  signup= "signup",
+  login = "login"
+}

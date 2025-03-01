@@ -10,9 +10,11 @@ import { closeNav, toggleNav } from "@/redux/features/navbar/navbarSlice";
 import { openLogin, openSignup } from "@/redux/features/auth/authSlice";
 import { useTranslation } from "react-i18next";
 import SwitchLanguage from "../SwitchLanguage/SwitchLanguage";
+import { openModal, setActiveItem } from "@/redux/features/modal/modalSlice";
+import { modalItem } from "@/types";
 
 const Navbar = () => {
-  const isOpen = useSelector((store: RootState) => store.navbar.isOpen);
+  const {isOpen} = useSelector((store: RootState) => store.navbar);
   const dispatch = useDispatch();
   const { t, i18n } = useTranslation();
 
@@ -45,7 +47,8 @@ const Navbar = () => {
           <Button
             type="secondary"
             onClick={() => {
-              dispatch(openLogin());
+              dispatch(setActiveItem(modalItem.login));
+              dispatch(openModal());
               dispatch(closeNav());
             }}
           >
@@ -55,7 +58,8 @@ const Navbar = () => {
           <Button
             type="primary"
             onClick={() => {
-              dispatch(openSignup());
+              dispatch(setActiveItem(modalItem.signup));
+              dispatch(openModal());
               dispatch(closeNav());
             }}
           >

@@ -2,15 +2,31 @@
 import { RootState } from "@/redux/store";
 import { useDispatch, useSelector } from "react-redux";
 import { FaRegWindowClose } from "react-icons/fa";
-import { closeModal } from "@/redux/features/auth/authSlice";
+import { closeModal, setActiveItem } from "@/redux/features/modal/modalSlice";
 import SignupForm from "../SignupForm/SignupForm";
 import LoginForm from "../LoginForm/LoginForm";
+import { modalItem } from "@/types";
+import Cart from "../Cart/Cart";
+import { useEffect } from "react";
 
 const Modal = () => {
-  const { loginIsOpen, signupIsOpen, modalIsOpen } = useSelector(
-    (store: RootState) => store.auth
+  const { modalIsOpen, activeItem } = useSelector(
+    (store: RootState) => store.modal
   );
   const dispatch = useDispatch();
+  const showActiveItem = () => {
+    switch (activeItem) {
+      case modalItem.cart:
+        return <Cart />;
+      case modalItem.login:
+        return <LoginForm />;
+      case modalItem.signup:
+        return <SignupForm />;
+      default:
+        return <Cart />;
+    }
+  };
+
   return (
     <div
       className={`${
@@ -27,13 +43,7 @@ const Modal = () => {
           size={25}
           onClick={() => dispatch(closeModal())}
         />
-        {loginIsOpen ? (
-          <LoginForm />
-        ) : signupIsOpen ? (
-          <SignupForm />
-        ) : (
-          "Empty Modal"
-        )}
+        {showActiveItem()}
       </div>
     </div>
   );

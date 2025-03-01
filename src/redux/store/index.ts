@@ -3,11 +3,13 @@ import tasksReducer from "@/redux/features/tasks/tasksSlice";
 import navbarReducer from "@/redux/features/navbar/navbarSlice";
 import authReducer from "@/redux/features/auth/authSlice";
 import cartReducer from "@/redux/features/cart/cartSlice";
+import modalReducer from "@/redux/features/modal/modalSlice"
 
 const store = configureStore({
   reducer: {
     tasks: tasksReducer,
     navbar: navbarReducer,
+    modal: modalReducer,
     auth: authReducer,
     cart: cartReducer,
   },
