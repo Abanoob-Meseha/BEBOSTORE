@@ -8,6 +8,7 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaGooglePlay } from "react-icons/fa";
 import { FaAppStoreIos } from "react-icons/fa";
 import { FaApple } from "react-icons/fa";
+import Logo from "../Logo/Logo";
 
 const Footer = () => {
   const iconStyle: string =
@@ -16,10 +17,7 @@ const Footer = () => {
     "border-2 p-2 px-4 bg-black flex gap-1 text-white rounded-lg items-center transition ease-in-out duration-800 hover:border-blue-800  hover:bg-white hover:text-blue-800";
   return (
     <footer id="footer" className="relative bg-white w-full pt-6 text-center shadow-2xl mt-10 flex flex-col items-center">
-      <div className="flex items-center gap-2">
-        <Image src="/logo.png" alt="todo icon" width={80} height={80} />
-        <h1 className="text-6xl font-bold">BEBO<span className="text-primary">STORE</span></h1>
-      </div>
+      <Logo textSize="4" imgWidth={80} imgHeight={80}/>
       {/* App Download */}
       <div>
         <h1 className="text-xl mt-2 text-blue-950">App is now available on:</h1>

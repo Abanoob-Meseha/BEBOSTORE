@@ -12,6 +12,7 @@ import { useTranslation } from "react-i18next";
 import SwitchLanguage from "../SwitchLanguage/SwitchLanguage";
 import { openModal, setActiveItem } from "@/redux/features/modal/modalSlice";
 import { modalItem } from "@/types";
+import Logo from "../Logo/Logo";
 
 const Navbar = () => {
   const {isOpen} = useSelector((store: RootState) => store.navbar);
@@ -21,11 +22,8 @@ const Navbar = () => {
   return (
     <div className="sticky top-0 w-[95%] bg-white p-4 mx-auto rounded-xl shadow-2xl flex items-center justify-between z-50">
       {/* logo Section */}
-      <Link href={"/"} className="flex items-center gap-2">
-        <Image src="/logo.png" alt="todo icon" width={50} height={50} />
-        <h1 className="text-3xl font-bold">
-          BEBO<span className="text-primary">STORE</span>
-        </h1>
+      <Link href={"/"}>
+        <Logo textSize="3" imgHeight={50} imgWidth={50}/>
       </Link>
       {/* menu icon for sm Screens */}
       <div className="flex md:hidden ">
