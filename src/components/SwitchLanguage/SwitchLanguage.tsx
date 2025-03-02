@@ -3,7 +3,7 @@ import { RootState } from "@/redux/store";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
-import { switchLanguage } from "@/redux/features/navbar/navbarSlice";
+import { switchLanguage } from "@/redux/slices/navbar/navbarSlice";
 
 const SwitchLanguage = () => {
   const { i18n, t } = useTranslation();

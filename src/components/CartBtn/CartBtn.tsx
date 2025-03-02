@@ -1,6 +1,6 @@
 "use client";
-import { openCart, toggleCart } from "@/redux/features/cart/cartSlice";
-import { openModal, setActiveItem, toggleModal } from "@/redux/features/modal/modalSlice";
+import { openCart, toggleCart } from "@/redux/slices/cart/cartSlice";
+import { openModal, setActiveItem, toggleModal } from "@/redux/slices/modal/modalSlice";
 import { RootState } from "@/redux/store";
 import { modalItem } from "@/types";
 import { FaShoppingCart } from "react-icons/fa";

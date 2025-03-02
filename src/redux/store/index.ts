@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import tasksReducer from "@/redux/features/tasks/tasksSlice";
-import navbarReducer from "@/redux/features/navbar/navbarSlice";
-import authReducer from "@/redux/features/auth/authSlice";
-import cartReducer from "@/redux/features/cart/cartSlice";
-import modalReducer from "@/redux/features/modal/modalSlice"
+import tasksReducer from "@/redux/slices/tasks/tasksSlice";
+import navbarReducer from "@/redux/slices/navbar/navbarSlice";
+import authReducer from "@/redux/slices/auth/authSlice";
+import cartReducer from "@/redux/slices/cart/cartSlice";
+import modalReducer from "@/redux/slices/modal/modalSlice"
 
 const store = configureStore({
   reducer: {

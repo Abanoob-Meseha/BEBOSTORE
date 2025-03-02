@@ -3,7 +3,7 @@ import Image from "next/image";
 import ProductCounter from "../ProductCounter/ProductCounter";
 import { FaTrash } from "react-icons/fa6";
 import { useDispatch } from "react-redux";
-import { calculateTotalPrice, removeFromCart } from "@/redux/features/cart/cartSlice";
+import { calculateTotalPrice, removeFromCart } from "@/redux/slices/cart/cartSlice";
 
 const CartProduct = (props: Product) => {
     const dispatch = useDispatch() ;

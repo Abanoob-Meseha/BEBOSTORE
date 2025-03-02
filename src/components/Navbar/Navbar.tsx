@@ -6,11 +6,11 @@ import { HiOutlineMenu } from "react-icons/hi";
 import { ReactNode } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
-import { closeNav, toggleNav } from "@/redux/features/navbar/navbarSlice";
-import { openLogin, openSignup } from "@/redux/features/auth/authSlice";
+import { closeNav, toggleNav } from "@/redux/slices/navbar/navbarSlice";
+import { openLogin, openSignup } from "@/redux/slices/auth/authSlice";
 import { useTranslation } from "react-i18next";
 import SwitchLanguage from "../SwitchLanguage/SwitchLanguage";
-import { openModal, setActiveItem } from "@/redux/features/modal/modalSlice";
+import { openModal, setActiveItem } from "@/redux/slices/modal/modalSlice";
 import { modalItem } from "@/types";
 import Logo from "../Logo/Logo";
 

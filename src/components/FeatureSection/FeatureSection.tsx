@@ -1,5 +1,6 @@
 import { FeatureType } from "@/types"
 import Feature from "../Feature/Feature"
+import SectionTitle from "../SectionTitle/SectionTitle"
 
 const features: FeatureType[] = [
     {
@@ -18,7 +19,7 @@ const features: FeatureType[] = [
 const FeatureSection = () => {
   return (
     <div className="text-center mt-16">
-        <h1 className="text-3xl font-bold text-blue-950">With us your order is: </h1>
+        <SectionTitle>With us your order is: </SectionTitle>
         <div className="flex flex-col items-center justify-center mt-8 md:flex-row md:mx-auto gap-10">
             {
                 features.map((feature , index)=>{

@@ -2,7 +2,7 @@ import {
   calculateTotalPrice,
   decreaseProductCount,
   increaseProductCount,
-} from "@/redux/features/cart/cartSlice";
+} from "@/redux/slices/cart/cartSlice";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 
