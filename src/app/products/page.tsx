@@ -2,7 +2,7 @@
 const page = () => {
   return (
     <div>
-        my Todos
+       <h1>Products Page</h1>
     </div>
   )
 }

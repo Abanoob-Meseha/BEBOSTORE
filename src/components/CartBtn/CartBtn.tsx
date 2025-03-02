@@ -7,7 +7,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 
 const CartBtn = () => {
-  const { totalNum } = useSelector((store: RootState) => store.cart);
+  const { totalNum , products } = useSelector((store: RootState) => store.cart);
   const dispatch = useDispatch();
   return (
     <div
@@ -17,8 +17,8 @@ const CartBtn = () => {
         dispatch(setActiveItem(modalItem.cart));
       }}
     >
-      <p className="bg-white rounded-xl p-1 absolute top-0 left-[60%]">
-        {totalNum}
+      <p className="text-white bg-blue-950 rounded-full p-1 px-2 font-bold absolute top-0 left-[60%] shadow-md">
+        {products.length}
       </p>
       <FaShoppingCart size={40} color="#1E3A8A" />
     </div>

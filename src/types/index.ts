@@ -23,9 +23,12 @@ export enum modalItem {
 }
 
 export type Product = {
+  id : number ;
   name: string;
-  img: string ;
-  description : string ;
+  price: number;
+  offerPercentage: number;
+  priceBefore: number;
+  count: number;
+  img: string;
   stock : number ;
-  
-};
+}
