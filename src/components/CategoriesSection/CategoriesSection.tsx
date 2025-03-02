@@ -5,7 +5,7 @@ import { Category } from "@/types";
 
 const CategoriesSection = () => {
   return (
-    <div className="mt-2 w-[80%] mx-auto">
+    <div className="mt-2 md:w-[80%] mx-auto w-[90%]">
       <SectionTitle>Categories</SectionTitle>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-8">
         {/* primary category */}
