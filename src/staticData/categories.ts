@@ -2,9 +2,9 @@ import { Category } from "@/types";
 
 const categories : Category[]= [
     {
-        name : "Shoes",
-        img : "/products/nike.avif",
-        imgTitle  : "sneakers"
+        name : "Clothes",
+        img : "/products/jackets.webp",
+        imgTitle  : "Jackets"
     },
     {
         name : "Mobile Accessories",
@@ -18,14 +18,19 @@ const categories : Category[]= [
     },
     {
         name : "Furniture",
-        img : "/products/nike.avif",
+        img : "/products/furniture.webp",
         imgTitle  : "sneakers"
     },
     {
-        name : "Furniture",
-        img : "/products/nike.avif",
-        imgTitle  : "sneakers"
-    }
+        name : "Musical Instruments",
+        img : "/products/guitar.png",
+        imgTitle  : "Guitar"
+    },
+    {
+        name : "Toys",
+        img : "/products/toys.png",
+        imgTitle  : "Games toys"
+    },
 ]
 
 export default categories ;
