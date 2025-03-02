@@ -5,6 +5,8 @@ import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import { ReactNode } from "react";
 import I18nProvider from "@/providers/I18nProvider";
+import CartBtn from "@/components/CartBtn/CartBtn";
+import Modal from "@/components/Modal/Modal";
 
 export const metadata: Metadata = {
   title: "BEBOSTORE",
@@ -21,6 +23,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <ReduxProvider>
           <I18nProvider>
             <Navbar />
+            <CartBtn />
+            <Modal />
             {children}
             <Footer />
           </I18nProvider>

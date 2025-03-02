@@ -6,7 +6,7 @@ const initialState = {
   cartIsOpen: false,
   totalNum: 200,
   totalPrice: 0,
-  products: [] as Product[],
+  products: [...products] as Product[],
 };
 const cartSlice = createSlice({
   name: "cart",

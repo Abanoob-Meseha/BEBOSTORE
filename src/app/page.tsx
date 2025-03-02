@@ -7,8 +7,6 @@ import Slider from "@/components/Slider/Slider";
 export default function Home() {
   return (
     <div>
-      <Modal/>
-      <CartBtn />
       <Banner />
       <FeatureSection/>
       <h1 className="text-2xl text-blue-950 font-bold mt-20 text-center">Our Clients Reviews</h1>
