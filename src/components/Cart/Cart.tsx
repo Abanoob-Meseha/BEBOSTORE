@@ -97,7 +97,7 @@ export const CartProduct = (props: product) => {
         </div>
       </div>
       {/* counter and subTotal */}
-      <div className="flex items-center justify-between w-full mt-1 pl-3">
+      <div className="flex items-center justify-between w-full mt-1">
         <ProductCounter count={props.count} />
         <p className="justify-end text-blue-900">
           {props.count * props.price} EGP
@@ -112,7 +112,7 @@ export const ProductCounter = ({ count }: { count: number }) => {
   return (
     <div className="flex gap-4 items-center mt-1">
       <FaMinus size={25} className={iconStyle} />
-      <p className="w-5 text-center">{count}</p>
+      <p className="w-6 text-center">{count}</p>
       <FaPlus size={24} className={iconStyle} />
     </div>
   );
