@@ -58,7 +58,7 @@ const PrimaryCategoryCard = ({ category }: { category: Category }) => {
           Shop Now <LuShoppingBag />{" "}
         </Button>
       </div>
-      <Image src={category.img} alt="category img" width={300} height={200} />
+      <Image src={category.img} className="md:w-[300]" alt="category img" width={200} height={200} />
     </div>
   );
 };

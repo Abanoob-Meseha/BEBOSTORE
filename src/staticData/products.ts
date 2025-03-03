@@ -9,7 +9,8 @@ const products: Product[] = [
       price: 250,
       count: 3,
       img: "/products/nike.avif",
-      stock : 3
+      stock : 3,
+      rating: 4,
 
     },
     {
@@ -20,7 +21,9 @@ const products: Product[] = [
       price: 400,
       count: 3,
       img: "/products/airbuds.png",
-      stock : 5
+      stock : 5,
+      rating: 4,
+
     },
     {
       id: 2,
@@ -30,8 +33,52 @@ const products: Product[] = [
       price: 3500,
       count: 1,
       img: "/products/iphone.webp",
-      stock : 10
-
+      stock : 10,
+      rating: 4,
+    },
+    {
+      id: 3,
+      name: "iphone 15 pro",
+      offerPercentage: 15,
+      priceBefore: 4000,
+      price: 3500,
+      count: 1,
+      img: "/products/iphone.webp",
+      stock : 10,
+      rating: 4,
+    },
+    {
+      id: 4,
+      name: "iphone 15 pro",
+      offerPercentage: 15,
+      priceBefore: 4000,
+      price: 3500,
+      count: 1,
+      img: "/products/iphone.webp",
+      stock : 10,
+      rating: 4,
+    },
+    {
+      id: 5,
+      name: "iphone 15 pro",
+      offerPercentage: 15,
+      priceBefore: 4000,
+      price: 3500,
+      count: 1,
+      img: "/products/iphone.webp",
+      stock : 10,
+      rating: 4,
+    },
+    {
+      id: 6,
+      name: "iphone 15 pro",
+      offerPercentage: 15,
+      priceBefore: 4000,
+      price: 3500,
+      count: 1,
+      img: "/products/iphone.webp",
+      stock : 10,
+      rating: 4,
     },
   
   ];

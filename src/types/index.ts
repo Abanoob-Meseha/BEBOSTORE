@@ -31,6 +31,7 @@ export type Product = {
   count: number;
   img: string;
   stock: number;
+  rating:number;
 };
 
 export type Category = {

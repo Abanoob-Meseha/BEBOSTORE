@@ -36,7 +36,7 @@ const Slider = (props : sliderProps) => {
   return (
     <div className="w-[95%] mx-auto mt-4 flex flex-col items-center overflow-hidden">
       <div
-        className="flex transition-transform duration-1000 ease-in-out mt-16 items-center relative max-w-full gap-5"
+        className="flex transition-transform duration-[2s] ease-in-out mt-16 items-center relative max-w-full gap-5"
         style={{
           transform: `translateX(-${
             currentIndex * ((screenWidth < 768 ? 100 : 30) + gapPercent)
