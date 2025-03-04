@@ -15,7 +15,7 @@ import { modalItem } from "@/types";
 import Logo from "../Logo/Logo";
 
 const Navbar = () => {
-  const {isOpen} = useSelector((store: RootState) => store.navbar);
+  const { isOpen } = useSelector((store: RootState) => store.navbar);
   const dispatch = useDispatch();
   const { t, i18n } = useTranslation();
 
@@ -23,7 +23,7 @@ const Navbar = () => {
     <div className="sticky top-0 w-[95%] bg-white p-4 mx-auto rounded-xl shadow-2xl flex items-center justify-between z-50">
       {/* logo Section */}
       <Link href={"/"}>
-        <Logo textSize="3" imgHeight={50} imgWidth={50}/>
+        <Logo textSize="3" imgHeight={50} imgWidth={50} />
       </Link>
       {/* menu icon for sm Screens */}
       <div className="flex md:hidden ">
@@ -33,7 +33,7 @@ const Navbar = () => {
       <div
         className={`${
           isOpen ? "flex" : "hidden"
-        } flex-col absolute top-[70px] w-[90%] left-[5%] items-center border-t-0 border-2 md:border-none border-blue-950 bg-blue-100 rounded-md p-4 gap-4 text-center md:flex md:flex-row md:bg-transparent md:static md:p-0 md:justify-between md:w-[60%] z-40`}
+        } flex-col absolute top-[70px] w-[92%] left-[4%] items-center border-t-0 border-2 md:border-none border-blue-950 rounded-t-none bg-slate-100 rounded-lg p-4 gap-4 text-center md:flex md:flex-row md:bg-transparent md:static md:p-0 md:justify-between md:w-[60%] z-40 transition-all duration-1000 ease-in-out`}
       >
         <div className="flex flex-col gap-4 md:flex-row">
           <NavLink href="/">{t("nav_home")}</NavLink>

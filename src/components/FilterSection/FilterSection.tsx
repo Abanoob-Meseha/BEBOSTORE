@@ -59,11 +59,11 @@ const Searchbar = () => {
     console.log(searchInput);
   };
   return (
-    <div className="bg-slate-200 shadow-lg rounded-lg flex gap-1 px-2 py-1 items-center w-80">
+    <div className="bg-blue-100 shadow-lg rounded-lg flex gap-1 px-2 py-1 items-center w-80">
       <input
         value={searchInput}
         onChange={(e) => setSearchInput(e.target.value)}
-        className="w-full p-1 border-none pl-2 bg-slate-200 outline-none"
+        className="w-full p-1 border-none pl-2 bg-blue-100 outline-none"
         type="search"
         id="productName"
         name="ProductName"
