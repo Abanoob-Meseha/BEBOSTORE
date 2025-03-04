@@ -71,6 +71,7 @@ export const {
   closeCart,
   toggleCart,
   removeFromCart,
+  addToCart,
   calculateTotalPrice,
   decreaseProductCount,
   increaseProductCount,

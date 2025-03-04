@@ -1,9 +1,12 @@
+"use client"
 import { Product } from "@/types";
 import Image from "next/image";
 import { FaHeart } from "react-icons/fa";
 import { CiStar } from "react-icons/ci";
 import { MdOutlineAddShoppingCart } from "react-icons/md";
 import Button from "../Button/Button";
+import { useDispatch } from "react-redux";
+import { addToCart, calculateTotalPrice } from "@/redux/slices/cart/cartSlice";
 
 interface productCardProps {
   product: Product;
@@ -67,14 +70,21 @@ const CardText = ({ name, price, priceBefore }: Product) => {
   );
 };
 
-const CardActions = ({ rating }: Product) => {
+const CardActions = (product: Product) => {
+  const dispatch = useDispatch();
   return (
     <div className="flex justify-between p-2 items-center mt-1">
       <div className="flex gap-1 items-center text-slate-800">
         <CiStar size={20} />
-        <p>{rating}</p>
+        <p>{product.rating}</p>
       </div>
-      <Button type="primary">
+      <Button
+        type="primary"
+        onClick={() => {
+          dispatch(addToCart({ product }));
+          dispatch(calculateTotalPrice());
+        }}
+      >
         <span className="text-sm">ADD</span>
         <MdOutlineAddShoppingCart size={15} />
       </Button>
