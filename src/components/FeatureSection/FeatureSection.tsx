@@ -4,15 +4,15 @@ import SectionTitle from "../SectionTitle/SectionTitle"
 
 const features: FeatureType[] = [
     {
-        src : "/featuresImgs/truck.gif",
+        src : "/features_imgs/truck.gif",
         title: "Fast Delivered"
     },
     {
-        src : "/featuresImgs/checklist.gif",
+        src : "/features_imgs/checklist.gif",
         title: "Organized"
     },
     {
-        src : "/featuresImgs/calendar.gif",
+        src : "/features_imgs/calendar.gif",
         title: "On Time"
     },
 ]

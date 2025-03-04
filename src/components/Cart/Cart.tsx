@@ -65,7 +65,7 @@ const CartItems = ({ products }: { products: Product[] }) => {
       ) : (
         <div className="flex flex-col items-center">
           <Image
-            src={"/featuresImgs/online-shop.gif"}
+            src={"/features_imgs/online-shop.gif"}
             alt="cart image empty"
             width={200}
             height={200}
