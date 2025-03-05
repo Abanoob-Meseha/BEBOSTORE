@@ -31,11 +31,27 @@ export type Product = {
   count: number;
   img: string;
   stock: number;
-  rating:number;
+  rating: number;
 };
 
 export type Category = {
   name: string;
   img: string;
   imgTitle: string;
+};
+
+export type Order = {
+  id: string;
+  status: "Placed" | "Shipped" | "Delivered";
+  date: string;
+  contact: {
+    name: string;
+    phone: string;
+    email: string;
+  };
+  address: string;
+  patment: string;
+  shipping_fees: number;
+  total_paid: number;
+  products: Product[];
 };

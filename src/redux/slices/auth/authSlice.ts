@@ -9,7 +9,6 @@ const authSlice = createSlice({
     initialState,
     reducers:{
        
-
     }
 })
 

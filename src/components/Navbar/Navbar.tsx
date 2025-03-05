@@ -126,13 +126,13 @@ const UserProfile = () => {
           menuIsOpen ? "flex" : "hidden"
         } absolute flex-col gap-4 bg-slate-200 p-2 px-8 rounded-md rounded-t-none shadow-xl z-40 top-14`}
       >
-        <Link href="" className="hover:text-blue-800">
-          Wishlist
-        </Link>
-        <Link href="" className="hover:text-blue-800">
+        <Link href="/dashboard" className="hover:text-blue-800">
           My orders
         </Link>
-        <Link href="" className="hover:text-blue-800">
+        <Link href="/dashboard/wishlist" className="hover:text-blue-800">
+          Wishlist
+        </Link>
+        <Link href="/dashboard/profile" className="hover:text-blue-800">
           Profile
         </Link>
         <Button type="primary" className="bg-red-600 hover:bg-red-500">
