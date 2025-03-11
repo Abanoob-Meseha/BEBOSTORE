@@ -31,10 +31,8 @@ export default CategoriesSection;
 
 const CategoryCard = ({
   category,
-  primary,
 }: {
   category: Category;
-  primary?: boolean;
 }) => {
   return (
     <div className="bg-white rounded-xl p-2 flex flex-col items-center justify-between duration-400 transition-transform hover:scale-105 hover:shadow-2xl cursor-pointer">

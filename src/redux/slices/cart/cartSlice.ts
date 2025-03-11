@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { Product } from "@/types";
-import products from "@/staticData/products";
 
 const initialState = {
   cartIsOpen: false,
@@ -33,7 +32,7 @@ const cartSlice = createSlice({
     },
     increaseProductCount: (state, { payload }) => {
       // payload is id
-      state.products.filter((product, index) => {
+      state.products.filter((product) => {
         if (product.id == payload.id) {
           if (product.count >= product.stock) {
             product.count = product.stock;
@@ -45,7 +44,7 @@ const cartSlice = createSlice({
     },
     decreaseProductCount: (state, { payload }) => {
       // payload is id
-      state.products.filter((product, index) => {
+      state.products.filter((product) => {
         if (product.id == payload.id) {
           if (product.count == 1) {
             product.count = 1;
@@ -57,7 +56,7 @@ const cartSlice = createSlice({
     },
     calculateTotalPrice: (state) => {
       let total: number = 0;
-      state.products.map((product, index) => {
+      state.products.map((product) => {
         total += product.count * product.price;
       });
       state.totalPrice = total;

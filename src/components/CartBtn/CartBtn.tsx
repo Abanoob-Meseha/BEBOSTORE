@@ -1,13 +1,12 @@
 "use client";
-import { openCart, toggleCart } from "@/redux/slices/cart/cartSlice";
-import { openModal, setActiveItem, toggleModal } from "@/redux/slices/modal/modalSlice";
+import { setActiveItem, toggleModal } from "@/redux/slices/modal/modalSlice";
 import { RootState } from "@/redux/store";
 import { modalItem } from "@/types";
 import { FaShoppingCart } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 
 const CartBtn = () => {
-  const { totalNum , products } = useSelector((store: RootState) => store.cart);
+  const { products } = useSelector((store: RootState) => store.cart);
   const dispatch = useDispatch();
   return (
     <div

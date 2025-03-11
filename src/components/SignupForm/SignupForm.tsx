@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import Button from "../Button/Button";
 import { FaGooglePlusSquare } from "react-icons/fa";
 import { FaFacebookSquare } from "react-icons/fa";

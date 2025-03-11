@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useTranslation } from "react-i18next";
 
 const Banner = () => {
-  const { t, i18n } = useTranslation();
+  const { t} = useTranslation();
 
   return (
     <div className="flex flex-col items-center px-4 sm:px-10 md:px-20 lg:px-40 pt-6 justify-center gap-8 md:gap-16 md:flex-row">

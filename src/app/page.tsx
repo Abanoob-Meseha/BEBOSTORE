@@ -1,7 +1,5 @@
 import Banner from "@/components/Banner/Banner";
 import FeatureSection from "@/components/FeatureSection/FeatureSection";
-import Modal from "@/components/Modal/Modal";
-import CartBtn from "@/components/CartBtn/CartBtn";
 import reviews from "@/staticData/reviews";
 import Slider from "@/components/Slider/Slider";
 import CategoriesSection from "@/components/CategoriesSection/CategoriesSection";

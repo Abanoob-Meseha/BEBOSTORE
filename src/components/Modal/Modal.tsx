@@ -2,12 +2,11 @@
 import { RootState } from "@/redux/store";
 import { useDispatch, useSelector } from "react-redux";
 import { FaRegWindowClose } from "react-icons/fa";
-import { closeModal, setActiveItem } from "@/redux/slices/modal/modalSlice";
+import { closeModal } from "@/redux/slices/modal/modalSlice";
 import SignupForm from "../SignupForm/SignupForm";
 import LoginForm from "../LoginForm/LoginForm";
 import { modalItem } from "@/types";
 import Cart from "../Cart/Cart";
-import { useEffect } from "react";
 
 const Modal = () => {
   const { modalIsOpen, activeItem } = useSelector(

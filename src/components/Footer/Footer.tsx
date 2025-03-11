@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { TbBrandYoutubeFilled } from "react-icons/tb";
 import { AiFillInstagram } from "react-icons/ai";
@@ -6,7 +5,6 @@ import { RiFacebookCircleFill } from "react-icons/ri";
 import { AiFillGooglePlusCircle } from "react-icons/ai";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaGooglePlay } from "react-icons/fa";
-import { FaAppStoreIos } from "react-icons/fa";
 import { FaApple } from "react-icons/fa";
 import Logo from "../Logo/Logo";
 
