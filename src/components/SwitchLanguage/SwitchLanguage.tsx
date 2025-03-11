@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { switchLanguage } from "@/redux/slices/navbar/navbarSlice";
 
 const SwitchLanguage = () => {
-  const { i18n, t } = useTranslation();
+  const { i18n} = useTranslation();
   const { toLanguage } = useSelector((store: RootState) => store.navbar);
   const dispatch = useDispatch();
   return (
